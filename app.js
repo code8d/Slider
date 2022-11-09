@@ -4,6 +4,14 @@ const slider = () => {
     const container = document.querySelector('.container')
     const mainSlide = document.querySelector('.main-slide')
     const slidesCount = mainSlide.querySelectorAll('div').length
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowUp') {
+            changeSlide('up')
+        }   else if (e.key === 'ArrowDown') {
+            changeSlide('down')
+        }
+    })
     
     let activeSlideIndex = 0
     
